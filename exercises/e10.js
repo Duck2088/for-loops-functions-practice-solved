@@ -3,11 +3,20 @@
 // Array example: bankAccounts in /data/data.js
 // getClientsWithLetterInName(bankAccounts, 'e') => ['Kevin', 'Steven', ...]
 
+
 export function getClientsWithLetterInName(array, letter) {
   // Your code goes here...
+  const namesWithLetter = [];
+  let name = [];
+  for (let i = 0; i < array.length; i++) {
 
+    name.push(array[i].name);
+    if (name[i].toLowerCase().includes(letter.toLowerCase())) {
+      namesWithLetter.push(name[i]);
+    }
+  }
+  return namesWithLetter;
 }
-
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-10"
 // If the test has all tests passed, switch to the next exercise file
